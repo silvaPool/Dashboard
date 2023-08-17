@@ -1,0 +1,55 @@
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import { Box, Grid } from '@mui/material';
+import styled from 'styled-components';
+import { useState } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+import { useContext } from 'react';
+import CardsWorkout from '../../pages/admin/CardsWorkout';
+import { Fragment } from 'react';
+
+
+function Cards() {
+
+    const StyledBox = styled(Box)`
+    height: 25vh; 
+    margin-left: 2rem;
+    margin-top: 3rem;
+`
+
+    const StyledButton = styled(Button)`
+        width: 40vw;
+        
+    `
+
+
+    const { userExercises } = useContext(AuthContext);
+
+    return (
+        <>
+            <Grid container spacing={4}>
+                {userExercises && userExercises.map((item, index) => (
+                    <Fragment key={index}>
+                        {item.group && (
+                            <Grid item>
+                                <CardsWorkout item={item} />
+                            </Grid>
+                         )} 
+
+                    </Fragment>
+                ))}
+            </Grid>
+
+        </>
+    )
+
+
+
+}
+
+export default Cards;
