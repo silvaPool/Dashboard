@@ -4,6 +4,7 @@ import Usuario from "../pages/auth/Usuario";
 import Cadastro from "../pages/auth/Cadastro";
 import Reset from "../pages/auth/ResetSenha";
 import MainGuard from "../utils/MainGuard";
+import { Navigate } from "react-router-dom";
 
 const OpenRoutes = [
    
@@ -11,6 +12,7 @@ const OpenRoutes = [
         path: "/",
         element: (
             <MainGuard>
+                  <Navigate to="/auth/usuario" replace />
                 <Header />
             </MainGuard>
         ),
