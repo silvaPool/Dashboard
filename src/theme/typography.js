@@ -5,10 +5,10 @@ const typography = {
     },
     h2: {
         fontSize: '2rem',
-        color: 'black',
+        color: 'white',
     },
     body1: {
-        color: 'black',
+        color: 'white',
     },
     body2: {
         color: 'white',

@@ -9,6 +9,7 @@ const StyledBoxPrincipal = styled(Box)`
         font-size: 1.5rem;
         text-align: center;
         padding: 2rem;
+        color: black;
 
 
         @keyframes changeBorder {

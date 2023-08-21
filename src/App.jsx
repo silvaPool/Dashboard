@@ -9,7 +9,6 @@ import Sidebar from './pages/estudante/Sidebar';
 
 function App() {
 
-    console.log("ronaldooo");
   return (
     <>
 

@@ -263,7 +263,7 @@ const Perfil = () => {
                                         type="text"
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        value={values.telefone}
+                                        value={values.cpf}
                                         customInput={StyledInputTwo} />
 
                                 </Stack>
@@ -286,7 +286,7 @@ const Perfil = () => {
                                         type="text"
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        value={values.telefone}
+                                        value={values.cep}
                                         customInput={StyledInputTwo} />
                                 </Stack>
                             </Grid>

@@ -91,7 +91,7 @@ function Usuario() {
                                 navigate("/student");
                             }
                         } else {
-                            setErrosFirebase("Ronaldo não encontrado");
+                            setErrosFirebase("Não encontrado");
                             // alert("Ronaldo não encontrado");
                             // if (res.code === "auth/user-not-found") {
                             //     alert("Email não encontrado");

@@ -16,7 +16,7 @@ export async function getWorkout(uid) {
 export async function updateWorkout(uid, values, title, index) {
     try {
         set(ref(database, 'workout/' + uid + '/' + index), {title: title, group: values});
-        alert('Os ronaldos foram atualizados');
+        alert('Os valores foram atualizados');
     } catch (e) {
         console.error(e);
     }
