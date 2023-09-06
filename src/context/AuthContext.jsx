@@ -88,9 +88,12 @@ export const Auth = ({ children }) => {
       // localStorage.setItem('@App:user', email);
       // localStorage.setItem('@App:senha', senha);
       setUser(response.user);
-      localStorage.setItem("@App:token", response.user.accessToken);
+      // localStorage.setItem("@App:token", response.user.accessToken);
+      localStorage.setItem("@AccessToken", response.user.accessToken);
+      localStorage.setItem("@User", JSON.stringify(response.user));
       // localStorage.setItem("@User", JSON.stringify(response.user));
-      localStorage.setItem("@App:user", JSON.stringify(response.user));
+      // localStorage.setItem("@App:user", JSON.stringify(response.user));
+     
       console.log(response);
       // console.log(response.user.accessToken);
 
@@ -112,7 +115,7 @@ export const Auth = ({ children }) => {
       // localStorage.setItem("@User", JSON.stringify(response.user));
       // return true;
       await setProfileData({ email }, response.user.uid);
-      await setWorkout(response.user.uid);
+      await setDisco(response.user.uid);
       return response;
     } catch (error) {
       return error.message;
@@ -141,15 +144,15 @@ export const Auth = ({ children }) => {
 
   function logout() {
 
-    // localStorage.removeItem('@AccessToken');
-    // localStorage.setItem('@User');
-
-    // setUser(null);
+    localStorage.removeItem('@AccessToken');
+    localStorage.removeItem('@User');
 
     setUser(null);
 
-    sessionStorage.removeItem('@App:user');
-    sessionStorage.removeItem('@App:token');
+    // setUser(null);
+
+    // sessionStorage.removeItem('@App:user');
+    // sessionStorage.removeItem('@App:token');
   }
 
   async function updateProfileUser(data) {
@@ -170,7 +173,7 @@ export const Auth = ({ children }) => {
   async function getUserExercises() {
     try {
 
-      const res = await getWorkout(user.uid);
+      const res = await getDisco(user.uid);
 
       if (res) {
         setUserExercises(res);
