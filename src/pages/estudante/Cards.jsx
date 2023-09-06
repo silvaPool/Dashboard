@@ -33,16 +33,21 @@ function Cards() {
     return (
         <>
             <Grid container spacing={4}>
-                {userExercises && userExercises.map((item, index) => (
-                    <Fragment key={index}>
-                        {item.group && (
-                            <Grid item>
-                                <CardsWorkout item={item} />
-                            </Grid>
-                         )} 
-
-                    </Fragment>
-                ))}
+                {userExercises && userExercises.length > 0 ? (
+                    userExercises.map((item, index) => (
+                        <Fragment key={index}>
+                            {item.group && (
+                                <Grid item>
+                                    <CardsWorkout item={item} />
+                                </Grid>
+                            )}
+                        </Fragment>
+                    ))
+                ) : (
+                    <Grid item sx={{color: 'black', fontSize: '2rem'}}>
+                        <p>Não há discos cadastrados</p>
+                    </Grid>
+                )}
             </Grid>
 
         </>

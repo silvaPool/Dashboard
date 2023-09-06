@@ -2,7 +2,7 @@ import { Fragment, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { getDisco } from "../../services/disco";
 import { Grid } from "@mui/material";
-import CardsWorkout from "./CardsDisco";
+import CardsDisco from "./CardsDisco";
 
 function Discos() {
 
@@ -29,13 +29,19 @@ function Discos() {
     return (
         <>
             <Grid container spacing={2}>
-                {discoData && discoData.map((item, index) => (
-                    <Fragment key={index}>
-                        <Grid item>
-                            <CardsWorkout item={item} uid={state} index={index} />
-                        </Grid>
-                    </Fragment>
-                ))}
+                {discoData && discoData.length > 0 ? (
+                    discoData.map((item, index) => (
+                        <Fragment key={index}>
+                            <Grid item>
+                                <CardsDisco item={item} uid={state} index={index} />
+                            </Grid>
+                        </Fragment>
+                    ))
+                ) : (
+                    <Grid item>
+                        <p>Não há discos disponíveis.</p>
+                    </Grid>
+                )}
             </Grid>
         </>
     );
