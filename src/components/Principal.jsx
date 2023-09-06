@@ -14,7 +14,7 @@ import StyledBoxPrincipal from './StyledBoxPrincipal';
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { Fragment } from 'react';
-import CardsWorkout from '../pages/admin/CardsWorkout';
+import CardsDisco from '../pages/admin/CardsDisco';
 
 
 

@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import { GoogleAuthProvider, createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth } from "../services/FirebaseConfig";
-import { getProfile, setProfileData, setWorkout, updateProfile } from "../services/profile";
-import { getWorkout } from "../services/workout";
+import { getProfile, setProfileData, setDisco, updateProfile } from "../services/profile";
+import { getDisco } from "../services/disco";
 import jwt_decode from "jwt-decode";
 
 function toTimeStamp(strDate) {

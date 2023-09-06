@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import CardsWorkout from "../admin/Workout";
+import CardsDisco from "../admin/CardsDisco";
 import { Grid, Typography } from "@mui/material";
 import CardDisco from "../../components/CardDisco";
 import { AuthContext } from "../../context/AuthContext";

@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { useContext } from 'react';
-import CardsWorkout from '../../pages/admin/CardsWorkout';
+import CardsDisco from '../../pages/admin/CardsDisco';
 import { Fragment } from 'react';
 
 

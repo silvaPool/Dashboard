@@ -47,7 +47,7 @@ export async function setPhoto(file, uid) {
     }
 }
 
-export async function setWorkout(uid) {
+export async function setDisco(uid) {
     const arrayDays = [
      {
         title: "Coleção 1",
@@ -77,7 +77,7 @@ export async function setWorkout(uid) {
 
 
     try {
-        set(refDatabase(database, 'workout/' + uid), arrayDays);
+        set(refDatabase(database, 'disco/' + uid), arrayDays);
     } catch (e) {
         console.error(e);
     }

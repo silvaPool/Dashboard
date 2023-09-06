@@ -30,7 +30,7 @@ const StudentRoutes = [
                 element: <Cards />
             },
             {
-                path: "workout-details",
+                path: "disco-details",
                 element: <StudentWorkoutDetails />
             },
            

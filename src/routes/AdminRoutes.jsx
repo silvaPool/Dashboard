@@ -1,7 +1,7 @@
 import Perfil from "../pages/Perfil";
 import HomeAdmin from "../pages/admin/AdminHome";
-import Workout from "../pages/admin/Workout";
-import WorkoutDetails from "../pages/admin/WorkoutDetails";
+import Discos from "../pages/admin/Discos";
+import DiscoDetails from "../pages/admin/DiscoDetails";
 // import HomeEstudante from "../pages/estudante/HomeEstudante";
 import HomeEstudanteDrawer from "../pages/estudante/HomeEstudanteDrawer";
 import AdminGuard from "../utils/AdminGuard";
@@ -26,12 +26,12 @@ const AdminRoutes = [
                 element: <Perfil />
             },
             {
-                path: "workout",
-                element: <Workout />
+                path: "disco",
+                element: <Discos />
             },
             {
-                path: "workout-details",
-                element: <WorkoutDetails />
+                path: "disco-details",
+                element: <DiscoDetails />
             },
         ],
 

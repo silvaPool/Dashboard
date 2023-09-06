@@ -1,13 +1,13 @@
 import React from 'react';
 import { Formik, Form, Field, FieldArray } from 'formik';
 import { useLocation } from 'react-router-dom';
-import { updateWorkout } from '../../services/workout';
+import { updateDisco } from '../../services/disco';
 import { Button, IconButton, InputLabel, Stack, TextField } from '@mui/material';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import AddIcon from '@mui/icons-material/Add';
 import { Avatar } from '@mui/material';
 
-function WorkoutDetails() {
+function DiscoDetails() {
 
     const { state } = useLocation();
    
@@ -170,4 +170,4 @@ function WorkoutDetails() {
     )
 }
 
-export default WorkoutDetails;
+export default DiscoDetails;

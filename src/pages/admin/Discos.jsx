@@ -1,35 +1,35 @@
 import { Fragment, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { getWorkout } from "../../services/workout";
+import { getDisco } from "../../services/disco";
 import { Grid } from "@mui/material";
-import CardsWorkout from "./CardsWorkout";
+import CardsWorkout from "./CardsDisco";
 
-function Workout() {
+function Discos() {
 
     const { state } = useLocation();
-    const [workoutData, setWorkoutData] = useState([]);
+    const [discoData, setDiscoData] = useState([]);
 
     console.log(workoutData);
 
     useEffect(() => {
 
-        async function getWorkoutsData() {
+        async function getDiscosData() {
             try {
-                const res = await getWorkout(state);
+                const res = await getDisco(state);
                 if (res) {
-                    setWorkoutData(res);
+                    setDiscoData(res);
                 }
             } catch (error) {
                 console.log(error);
             }
         }
-        getWorkoutsData();
+        getDiscosData();
     }, [state]);
 
     return (
         <>
             <Grid container spacing={2}>
-                {workoutData && workoutData.map((item, index) => (
+                {discoData && discoData.map((item, index) => (
                     <Fragment key={index}>
                         <Grid item>
                             <CardsWorkout item={item} uid={state} index={index} />
@@ -41,4 +41,4 @@ function Workout() {
     );
 }
 
-export default Workout;
+export default Discos;

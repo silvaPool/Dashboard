@@ -15,7 +15,7 @@ import { Box } from '@mui/material';
 import StyledBoxCard from '../../components/StyledBoxCard';
 
 
-function CardsWorkout({ item, uid, index }) {
+function CardsDisco({ item, uid, index }) {
 
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
@@ -39,12 +39,12 @@ function CardsWorkout({ item, uid, index }) {
                     <StyledButton
                         onClick={() => {
                             if (user.email === "admin@admin.com") {
-                                navigate("/admin/workout-details",
+                                navigate("/admin/disco-details",
                                     {
                                         state: { group: item, uid: uid, index: index },
                                     });
                             } else {
-                                navigate("/home/student/workout-details",
+                                navigate("/home/student/disco-details",
                                 {
                                     state: item,
                                 });
@@ -66,4 +66,4 @@ function CardsWorkout({ item, uid, index }) {
     );
 }
 
-export default CardsWorkout;
+export default CardsDisco;
