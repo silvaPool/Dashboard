@@ -1,19 +1,19 @@
 import { Navigate } from "react-router-dom";
 import Principal from "../components/Principal";
 import Perfil from "../pages/Perfil";
-import Cards from "../pages/estudante/Cards";
-import HomeEstudanteDrawer from "../pages/estudante/HomeEstudanteDrawer";
-import StudentWorkoutDetails from "../pages/estudante/WorkoutStudentDetails";
+import Cards from "../pages/cliente/Cards";
+import HomeClienteDrawer from "../pages/cliente/HomeClienteDrawer";
+import DiscoClienteDetalhes from "../pages/cliente/DiscoClienteDetalhes";
 import AuthGuard from "../utils/AuthGuard";
 
-const StudentRoutes = [
+const ClienteRoutes = [
 
     {
-        path: "/home/student",
+        path: "/home/cliente",
         element: (
             <AuthGuard>
                   <Navigate to="principal" replace />
-                <HomeEstudanteDrawer />
+                <HomeClienteDrawer />
             </AuthGuard>
         ),
         children: [
@@ -31,7 +31,7 @@ const StudentRoutes = [
             },
             {
                 path: "disco-details",
-                element: <StudentWorkoutDetails />
+                element: <DiscoClienteDetalhes />
             },
            
         ],
@@ -39,4 +39,4 @@ const StudentRoutes = [
     },
 ];
 
-export default StudentRoutes;
+export default ClienteRoutes;

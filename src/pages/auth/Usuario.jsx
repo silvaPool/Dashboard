@@ -88,7 +88,7 @@ function Usuario() {
                             if (res.user.email === 'admin@admin.com') {
                                 navigate("/home/admin");
                             } else {
-                                navigate("/student");
+                                navigate("/cliente");
                             }
                         } else {
                             setErrosFirebase("Não encontrado");

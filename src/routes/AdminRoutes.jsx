@@ -3,7 +3,7 @@ import HomeAdmin from "../pages/admin/AdminHome";
 import Discos from "../pages/admin/Discos";
 import DiscoDetails from "../pages/admin/DiscoDetails";
 // import HomeEstudante from "../pages/estudante/HomeEstudante";
-import HomeEstudanteDrawer from "../pages/estudante/HomeEstudanteDrawer";
+import HomeClienteDrawer from "../pages/cliente/HomeClienteDrawer";
 import AdminGuard from "../utils/AdminGuard";
 
 
@@ -13,7 +13,7 @@ const AdminRoutes = [
         path: "/admin",
         element: (
             <AdminGuard>
-                <HomeEstudanteDrawer />
+                <HomeClienteDrawer />
             </AdminGuard>
         ),
         children: [

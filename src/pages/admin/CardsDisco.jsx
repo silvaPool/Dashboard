@@ -44,7 +44,7 @@ function CardsDisco({ item, uid, index }) {
                                         state: { group: item, uid: uid, index: index },
                                     });
                             } else {
-                                navigate("/home/student/disco-details",
+                                navigate("/home/cliente/disco-details",
                                 {
                                     state: item,
                                 });
